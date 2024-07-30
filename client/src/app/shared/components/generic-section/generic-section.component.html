@@ -1,0 +1,12 @@
+<div class="section--generic">
+  <h1 class="section--generic__title">{{title}}</h1>
+
+  <div class="section--generic__player--zone">
+    <ul class="player--list" [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big'}">
+          <li *ngFor="let title of titleData">
+            <!-- {{track.name}} -->
+              <app-card-title [title]="title" [mode]="mode"></app-card-title>
+          </li>
+      </ul>
+  </div>
+</div>
