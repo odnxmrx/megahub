@@ -20,7 +20,7 @@ Server PORT = `3001`
 
 ---
 
-### APIs
+## APIs
 
 Using `GET` Method:
 
@@ -36,16 +36,7 @@ Single Movie by id -> http://localhost:3001/movies/id
 
 ```
 
-`JSON` struture to be sent (by body):
-```
-{
-    "username": "yourusername",
-    "email": "youremail@email.com",
-    "password": "YourStrongPassword"
-}
-```
-
----
+### POST Method
 
 POST - Create new User and/or Movie:
 Using `POST` Method
@@ -57,6 +48,34 @@ Create User -> http://localhost:3001/users
 Create Movie -> http://localhost:3001/movies
 
 ```
+
+`JSON` struture to be sent (by body):
+
+  - For New User
+
+```
+{
+    "username": "yourusername",
+    "email": "youremail@email.com",
+    "password": "YourStrongPassword"
+}
+```
+
+  - For New Movie
+
+```
+{
+    "title": "Your Movie Title",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mattis in mi id pellentesque. Nulla facilisis molestie tellus vitae sodales. Maecenas lorem augue, tincidunt sit amet lacinia non, lacinia vel massa.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYzUzOTA5ZTMtMTdlZS00MmQ5LWFmNjEtMjE5MTczN2RjNjE3XkEyXkFqcGdeQXVyNTc2ODIyMzY@._V1_SX300.jpg",
+    "genre":"Drama, Fantasy",
+    "year": "2022-02-01",
+    "duration": 120
+}
+```
+
+
+---
 
 
 ## Database

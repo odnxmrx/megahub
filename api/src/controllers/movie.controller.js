@@ -31,10 +31,39 @@ const getMovie = async (req, res) => {
   }
 
   return res.json(result.recordset[0]);
+}
+
+//POST New Movie
+const postMovie = async (req, res) => {
+  const pool = await getConnection();
+
+  const result = await pool
+    .request()
+    .input("title", sql.NVarChar, req.body.title)
+    .input("description", sql.Text, req.body.description)
+    .input("poster", sql.VarChar, req.body.poster)
+    .input("genre", sql.VarChar, req.body.genre)
+    .input("year", sql.SmallDateTime, req.body.year)
+    .input("duration", sql.SmallInt, req.body.duration)
+    .query('INSERT INTO Movies (title, description, poster, genre, year, duration) VALUES (@title, @description, @poster, @genre, @year, @duration); SELECT SCOPE_IDENTITY() AS movieId;')
+    //.query('INSERT INTO Movies (title = @title, description = @description, poster = @poster, genre = @genre, year = @year, duration = @duration)')
+
+    //console.log(result);
+    res.json({
+      movieId: result.recordset[0].movieId,
+      title: req.body.title,
+      description: req.body.description,
+      poster: req.body.poster,
+      genre: req.body.genre,
+      year: req.body.year,
+      duration: req.body.duration
+    })
 
 }
+
     
 module.exports = {
   getMovies,
   getMovie,
+  postMovie,
 }
