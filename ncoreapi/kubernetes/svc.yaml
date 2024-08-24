@@ -1,0 +1,18 @@
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: megahubapi-svc
+  labels:
+    #a que app relaciono este svc
+    app: megahubapi
+spec:
+  type: NodePort # Tipo de servicio
+  selector: # que label usaremos para observar
+    app: backend
+    #app.kubernetes.io/name: MyApp
+  ports:
+    - protocol: TCP
+      port: 80 # puerto de escucha del service
+      #targetPort: 80 # qué puerto del cont o Pod consumiré, a mandarlo
+      NodePort: 30120

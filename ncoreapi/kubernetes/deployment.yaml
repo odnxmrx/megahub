@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations: 
+    kubernetes.io/change-cause: "Deployment creation"
+  name: megahubapi-deployment
+  labels:
+    app: backend
+spec: # replicaset
+  revisionHistoryLimit: 3
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec: # pods related
+      containers:
+      - name: megahubapi
+        image: megahubapi:latest
+        #If not present locally, then download from web (docker)
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
