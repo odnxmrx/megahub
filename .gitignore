@@ -1,3 +1,5 @@
+.vscode
+.dockerignore
 
 # Los modules
 /api/node_modules
@@ -5,3 +7,8 @@
 
 
 /client/node_modules
+
+#NetCoreApiRelated
+/ncoreapi/bin
+/ncoreapi/appsettings.json
+/ncoreapi/appsettings.Development.json
