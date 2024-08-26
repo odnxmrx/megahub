@@ -52,17 +52,20 @@ Implementing `Microsoft SQL Server 2022`.
 
 Database name: `Megahubdb`.
 
-This is a reviewd and normalized version of previous Database created for previous Sprint.
-
 Normalization:
 - Genre table
 - User Favorites tables, for:
   - Movies
   - Series
 
+Find the `.sql` project, for DB creation and configuration, files in the [database directory](/ncoreapi/database/).
+
+
 ### E-R Diagram
 
 ![alt text](public/megahub-db-normal.png)
+
+*This is a reviewed and normalized version of previous Database created for previous Sprint.*
 
 
 ### Feedback
