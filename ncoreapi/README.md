@@ -2,12 +2,22 @@
 
 Welcome to the Web API Service for "MegaHub" project.
 
-The goal for this service is to provide an API to directly consume the Database.
+The goal for this service is to provide an API to directly consume the Database (DB).
 
 Implementation:
 - .NET Core API
 - Microsoft SQL Server 2022
 - Swagger
+
+### Project configuration:
+You need to add the following configuration in your `appsettings.json` file to set up the Database connection:
+
+```
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=ReplaceWithYourServerName;Database=Megahubdb;User Id=ReplaceWithYourUserId;Password=ReplaceWithYourPassword;TrustServerCertificate=true;"
+  }
+```
+Replace with your cretentials; database name must be the same as created. [See Db section](##-Database).
 
 ### Project start:
 
@@ -34,6 +44,25 @@ http://localhost:5167/swagger
 
 
 ---
+
+
+## Database
+
+Implementing `Microsoft SQL Server 2022`.
+
+Database name: `Megahubdb`.
+
+This is a reviewd and normalized version of previous Database created for previous Sprint.
+
+Normalization:
+- Genre table
+- User Favorites tables, for:
+  - Movies
+  - Series
+
+### E-R Diagram
+
+![alt text](public/megahub-db-normal.png)
 
 
 ### Feedback
