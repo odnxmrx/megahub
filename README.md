@@ -22,7 +22,7 @@ Backend API service developed with `ASP .Net Core`.
 
 Refer to [API service directory](/ncoreapi/README.md).
 
-*__NOTE__: please ignore the "/api" folder, since it was a temporary solution for the backend using NodeJS. (Backend is located under "/ncoreapi").*
+*__NOTE__: please ignore the "/api" folder, (since it was a temporary solution for the backend using NodeJS.) Backend is located under "/ncoreapi".*
 
 ## Database
 
