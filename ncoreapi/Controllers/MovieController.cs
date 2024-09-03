@@ -59,7 +59,6 @@ namespace ncoreapi.Controllers
       }
 
 
-
       //POST - Create new Movie
       [HttpPost]
       public async Task<ActionResult<List<Movie>>> PostMovie(Movie movie) //[FromBody] <- ya lo sabe
@@ -76,7 +75,6 @@ namespace ncoreapi.Controllers
         );
         
       }
-
 
       //PUT - Update registry
       [HttpPut("{movieId}")]
@@ -117,7 +115,6 @@ namespace ncoreapi.Controllers
         await _context.SaveChangesAsync();
 
         return Ok(await _context.Movies.ToListAsync());
-
       }
 
   }

@@ -46,5 +46,19 @@ namespace ncoreapi.Controllers
     }
 
 
+    //DELETE
+    [HttpDelete("{userId}")]
+    public async Task<ActionResult<Movie>> DeleteUser(int userId)
+    {
+      var myUser = await _context.Users.FindAsync(userId);
+
+      _context.Users.Remove(myUser);
+      await _context.SaveChangesAsync();
+
+      return Ok("User was deleted.");
+
+    }
+
+
     }
 }
