@@ -10,5 +10,6 @@
 
 #NetCoreApiRelated
 /ncoreapi/bin
+/ncoreapi/obj/
 /ncoreapi/appsettings.json
 /ncoreapi/appsettings.Development.json
