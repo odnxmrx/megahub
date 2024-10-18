@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/armando/Documents/Cursos/Liderly/megahub/ncoreapi/ncoreapi.csproj": {}
+    "/home/armando/Documents/Cursos/Liderly/megahub/NCoreApi/NCoreApi.csproj": {}
   },
   "projects": {
-    "/home/armando/Documents/Cursos/Liderly/megahub/ncoreapi/ncoreapi.csproj": {
+    "/home/armando/Documents/Cursos/Liderly/megahub/NCoreApi/NCoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/armando/Documents/Cursos/Liderly/megahub/ncoreapi/ncoreapi.csproj",
-        "projectName": "ncoreapi",
-        "projectPath": "/home/armando/Documents/Cursos/Liderly/megahub/ncoreapi/ncoreapi.csproj",
+        "projectUniqueName": "/home/armando/Documents/Cursos/Liderly/megahub/NCoreApi/NCoreApi.csproj",
+        "projectName": "NCoreApi",
+        "projectPath": "/home/armando/Documents/Cursos/Liderly/megahub/NCoreApi/NCoreApi.csproj",
         "packagesPath": "/home/armando/.nuget/packages/",
-        "outputPath": "/home/armando/Documents/Cursos/Liderly/megahub/ncoreapi/obj/",
+        "outputPath": "/home/armando/Documents/Cursos/Liderly/megahub/NCoreApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/armando/.nuget/NuGet/NuGet.Config"
@@ -44,10 +44,6 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
             },

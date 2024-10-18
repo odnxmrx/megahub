@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/ncoreapi.props" />
+  <Import Project="../build/NCoreApi.props" />
 </Project>
